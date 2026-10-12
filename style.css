@@ -21,3 +21,108 @@ figure img {
   max-width: 100%;
   height: auto;
 }
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 16px 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #222;
+}
+
+nav a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+nav a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+:root {
+  --bg: #000;
+  --text: #e6e6e6;
+  --muted: #aaa;
+  --border: #222;
+  --accent: #6cb6ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 16px 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+nav a:hover {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.6rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin: 60px 0 10px;
+  color: #fff;
+}
+
+h2 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Sections */
+section {
+  padding-top: 40px;
+  margin-bottom: 60px;}
