@@ -1,61 +1,11 @@
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.125rem;
-}
-
-figure {
-  width: fit-content;
-  margin: 20px auto;
-}
-
-figcaption {
-  font-size: 0.9rem;
-  color: #666;
-  text-align: center;
-  margin-top: 8px;
-}
-
-figure img {
-  display: block;
-  width: 300px;
-  max-width: 100%;
-  height: auto;
-}
-
-nav {
-  position: sticky;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  padding: 16px 0;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid #222;
-}
-
-nav a {
-  color: #aaa;
-  text-decoration: none;
-  font-size: 0.85rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-nav a:hover {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
 :root {
-  --bg: #000;
-  --text: #e6e6e6;
-  --muted: #aaa;
-  --border: #222;
-  --accent: #6cb6ff;
+  --bg: #fff;
+  --text: #222;
+  --muted: #666;
+  --border: #e5e5e5;
+  --accent: #1a5fb4;
+  --strong: #000;
+  --nav-bg: rgba(255, 255, 255, 0.85);
 }
 
 html {
@@ -63,8 +13,8 @@ html {
 }
 
 body {
-  font-family: system-ui, sans-serif;
-  font-size: 1.05rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.125rem;
   line-height: 1.7;
   max-width: 700px;
   margin: 0 auto;
@@ -81,7 +31,7 @@ nav {
   justify-content: center;
   gap: 32px;
   padding: 16px 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -98,8 +48,8 @@ nav a {
 }
 
 nav a:hover {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: var(--strong);
+  border-bottom-color: var(--strong);
 }
 
 /* Headings */
@@ -108,7 +58,7 @@ h1 {
   font-weight: 300;
   letter-spacing: -0.02em;
   margin: 60px 0 10px;
-  color: #fff;
+  color: var(--strong);
 }
 
 h2 {
@@ -125,4 +75,39 @@ h2 {
 /* Sections */
 section {
   padding-top: 40px;
-  margin-bottom: 60px;}
+  margin-bottom: 60px;
+  scroll-margin-top: 50px;
+}
+
+/* Links in text */
+p a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+p a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Images */
+figure {
+  width: fit-content;
+  margin: 24px auto;
+}
+
+figure img {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 8px;
+}
